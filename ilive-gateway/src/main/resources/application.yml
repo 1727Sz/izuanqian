@@ -1,0 +1,25 @@
+
+
+spring:
+    application:
+        name: ilive-gateway
+   
+server:
+    port: 80
+    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://ilive.cn:1111/eureka
+
+zuul:
+    routes:
+        a:
+            path: /a/**
+            serviceId: a
+        b:
+            path: /bbbbb/**
+            serviceId: bservice
+        c:
+            path: /cc/**
+            serviceId: c

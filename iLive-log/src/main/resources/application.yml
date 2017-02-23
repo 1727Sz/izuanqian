@@ -1,0 +1,13 @@
+
+
+spring:
+    application:
+        name: ilive-log
+   
+server:
+    port: 8888
+    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://ilive.cn:1111/eureka
