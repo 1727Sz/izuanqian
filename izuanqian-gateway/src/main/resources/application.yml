@@ -14,12 +14,12 @@ eureka:
 
 zuul:
     routes:
-        a:
-            path: /a/**
-            serviceId: a
         b:
             path: /bbbbb/**
             serviceId: bservice
         c:
             path: /cc/**
             serviceId: c
+        file:
+            path: /file/**
+            serviceId: a

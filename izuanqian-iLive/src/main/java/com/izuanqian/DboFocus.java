@@ -5,7 +5,6 @@
  */
 package com.izuanqian;
 
-import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,7 +12,6 @@ import java.io.Serializable;
 /**
  * @author sanlion
  */
-
 @Data
 public class DboFocus implements Serializable {
 
@@ -25,4 +23,3 @@ public class DboFocus implements Serializable {
     private String category;
     private int count;
 }
-

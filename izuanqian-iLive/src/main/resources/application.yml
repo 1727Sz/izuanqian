@@ -2,12 +2,18 @@
 ---
 
 spring:
-  datasource:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/ilive_res
-      username: root
-      password: root
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ilive_res
+        username: root
+        password: root
+    application:
+        name: izuanqian-ilive
 
+server:
+    port: 8888
 
-## mybatis配置
-mybatis:
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://ilive.cn:1111/eureka
