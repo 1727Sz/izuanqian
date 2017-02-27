@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.izuanqian.rest.focus;
+package com.izuanqian;
 
 import com.google.common.collect.Lists;
 import java.util.List;
 
-import com.izuanqian.rest.focus.vo.FocusVo;
+import com.izuanqian.VoFocus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,13 +28,12 @@ public class FocusController {
     @Autowired private FocusService focusService;
 
     @GetMapping
-    public List<FocusVo> sayHello(
+    public List<VoFocus> sayHello(
             @RequestParam("q") String keyword) {
         List<Focus> focuses = focusService.search(keyword);
-        List<FocusVo> vos = Lists.newArrayList();
+        List<VoFocus> vos = Lists.newArrayList();
         focuses.forEach((Focus t) -> {
-            vos.add(
-                    FocusVo.builder()
+            vos.add(VoFocus.builder()
                             .title(t.getTitle())
                             .content(t.getAddress())
                             .build()
@@ -41,4 +41,10 @@ public class FocusController {
         });
         return vos;
     }
+    
+    @GetMapping("/cfg")
+    public String getCfg(@Value("${spring.server.version}") String version) {
+        return version;
+    }
+    
 }

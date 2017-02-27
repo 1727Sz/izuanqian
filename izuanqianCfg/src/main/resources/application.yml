@@ -1,0 +1,30 @@
+
+
+spring:
+    application:
+        name: izuanqian-cfg-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://git.oschina.net/vsan/izuanqian-cfg
+                    searchPaths: dev
+                    username: sanlion@vip.qq.com
+                    password: ZBmima000
+    rabbitmq:
+        host: i.cn
+        port: 5672
+        username: guest
+        password: guest
+   
+server:
+    port: 1231
+    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://i.cn:1111/eureka
+    
+management:
+    security:
+        enabled: false

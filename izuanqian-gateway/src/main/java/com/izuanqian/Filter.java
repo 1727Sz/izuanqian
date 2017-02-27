@@ -7,6 +7,7 @@ package com.izuanqian;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -26,13 +27,16 @@ public class Filter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return false;
+        return true;
     }
+    
+    @Autowired private TokenManager tokenManager;
 
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
-        return null;
+        tokenManager.hand(ctx.getRequest());
+        return "dlajdlkasdjljs";
     }
 
 }

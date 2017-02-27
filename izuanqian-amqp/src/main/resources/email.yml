@@ -1,0 +1,14 @@
+### YAML Template.
+#---
+#spring:
+#    mail:
+#        host: smtp.qq.com
+#        username: sanlion@vip.qq.com
+#        password: dushangliang
+#        properties:
+#            mail:
+#                smtp:
+#                    auth: true
+#                    starttls:
+#                        enable: true
+#                        required: true

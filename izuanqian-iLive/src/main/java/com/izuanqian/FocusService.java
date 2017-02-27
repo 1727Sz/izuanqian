@@ -1,8 +1,6 @@
-package com.izuanqian.rest.focus;
+package com.izuanqian;
 
 import com.google.common.collect.Lists;
-import com.izuanqian.DboFocus;
-import com.izuanqian.FocusQueryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -15,7 +13,7 @@ import java.util.List;
 @Service
 public class FocusService {
 
-    @Autowired private FocusQueryMapper focusQueryMapper;
+    @Autowired private FocusMapper focusMapper;
 
     /**
      * 关键词搜索关注点
@@ -24,7 +22,7 @@ public class FocusService {
      * @return
      */
     public List<Focus> search(String keyword) {
-        final List<DboFocus> dboFocuses = focusQueryMapper.queryFocusesBySearch(keyword);
+        final List<DboFocus> dboFocuses = focusMapper.queryFocusesBySearch(keyword);
         List<Focus> focuses = Lists.newArrayList();
         if (!CollectionUtils.isEmpty(dboFocuses)) {
             dboFocuses.forEach(dboFocus ->

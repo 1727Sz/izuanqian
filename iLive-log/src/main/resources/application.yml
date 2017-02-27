@@ -10,4 +10,4 @@ server:
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://ilive.cn:1111/eureka
+            defaultZone: http://i.cn:1111/eureka

@@ -1,0 +1,24 @@
+
+
+spring:
+    application:
+        name: izuanqian-rabbit
+    rabbitmq:
+        host: i.cn
+        port: 5672
+        username: guest
+        password: guest
+    mail:
+        host: smtp.qq.com
+        username: sanlion@vip.qq.com
+        password: dushangliang
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: true
+   
+server:
+    port: 8889

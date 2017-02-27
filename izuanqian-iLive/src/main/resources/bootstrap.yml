@@ -1,0 +1,32 @@
+
+#spring:
+#    cloud:
+#        config:
+#            name: izuanqian
+#            profile: dev
+#            label: 442
+#            uri: http://ilive.cn:1231/
+            
+            
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://i.cn:1111/eureka
+            
+            
+spring:
+    application:
+         name: izuanqian_ilive
+    cloud:
+        config:
+            discovery:
+                enabled: true
+                serviceId: izuanqian-cfg-server
+            profile: dev
+            label: ${application.version}
+            
+server:
+    port:  8888
+    
+application:
+    version: 442
