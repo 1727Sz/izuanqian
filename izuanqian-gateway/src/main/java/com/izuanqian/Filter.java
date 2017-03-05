@@ -27,7 +27,7 @@ public class Filter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
     
     @Autowired private TokenManager tokenManager;

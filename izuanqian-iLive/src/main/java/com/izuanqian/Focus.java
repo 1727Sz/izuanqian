@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author sanlion
  */
 
-@Data
+@Data 
 @Builder
 public class Focus implements Serializable {
 
