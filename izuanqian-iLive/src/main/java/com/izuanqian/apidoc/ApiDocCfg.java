@@ -31,6 +31,7 @@ public class ApiDocCfg {
                         new Contact("", "", ""),
                         "",
                         ""))
+                .useDefaultResponseMessages(false)
                 ;
     }
 
@@ -47,6 +48,7 @@ public class ApiDocCfg {
                         new Contact("sanlion.do", "https://github.com/sanlion/", "sanlion@vip.qq.com"),
                         "apache 2.0",
                         ""))
+                .useDefaultResponseMessages(false)
                 ;
     }
 }

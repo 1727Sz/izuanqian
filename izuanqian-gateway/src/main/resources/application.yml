@@ -3,9 +3,9 @@
 spring:
     application:
         name: ilive-gateway
-#    redis:
-#        database: 0
-#        host: i.cn
+    redis:
+        database: 0
+        host: i.cn
    
 server:
     port: 80
