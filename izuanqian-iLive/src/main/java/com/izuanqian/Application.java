@@ -17,9 +17,9 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-
-    @GetMapping(value = "/doc")
-    public String index() {
-        return "redirect:swagger-ui.html";
-    }
+//
+//    @GetMapping(value = "/doc")
+//    public String index() {
+//        return "redirect:swagger-ui.html";
+//    }
 }

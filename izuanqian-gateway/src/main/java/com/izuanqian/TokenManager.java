@@ -7,6 +7,7 @@ package com.izuanqian;
 
 import com.google.common.base.Strings;
 import com.google.common.io.BaseEncoding;
+import com.izuanqian.redis.Redis;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
@@ -48,7 +49,7 @@ public class TokenManager {
         System.out.println(deviceToken);
         System.out.println(deviceType);
         String key = Key.__("token:{0}", token);
-        redis.set(key, new Token(token, deviceType, deviceToken, null, new Date()).toString());
+//        redis.set(key, new Token(token, deviceType, deviceToken, null, new Date()).toString());
     }
 
     @Data

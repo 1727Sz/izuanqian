@@ -1,6 +1,7 @@
 package com.izuanqian;
 
 import com.izuanqian.apidoc.version.V440;
+import com.izuanqian.exception.BizException;
 import com.izuanqian.response.ApiResponse;
 import com.izuanqian.response.Fail;
 import com.izuanqian.response.Ok;
@@ -29,6 +30,9 @@ public class DeviceController {
     @PostMapping
     public ApiResponse updateDeviceCode(
             @RequestBody DeviceUpdatePo device) {
+        if(true){
+            throw new BizException(123, "device update error.");
+        }
         return new Ok(device);
     }
 
