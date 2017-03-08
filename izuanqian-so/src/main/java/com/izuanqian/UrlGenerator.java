@@ -1,11 +1,9 @@
 package com.izuanqian;
 
-import com.izuanqian.redis.RedisListOps;
-import com.netflix.discovery.converters.Auto;
+import com.izuanqian.redis.Redis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import sun.rmi.runtime.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +20,7 @@ public class UrlGenerator {
     @Value("${cn.ilive.so.doamin}")
     private String domain;
 
-    @Autowired private RedisListOps redisListOps;
+    @Autowired private Redis redisListOps;
 
     public String nextUrl() {
         long id = redisListOps.nextKey();

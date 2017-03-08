@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @author sanlion
  */
 @Component
-public class RedisListOps {
+public class Redis {
 
     @Autowired
     private StringRedisTemplate template;
