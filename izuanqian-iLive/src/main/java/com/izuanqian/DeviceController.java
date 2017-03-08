@@ -8,6 +8,7 @@ import com.izuanqian.response.Ok;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -22,6 +23,8 @@ import java.util.Arrays;
 @Api(tags = "device", description = "log device information.")
 public class DeviceController {
 
+    @Value("${name}") private String name;
+
     @V440
     @ApiOperation(
             value = "update device info",
@@ -30,6 +33,7 @@ public class DeviceController {
     @PostMapping
     public ApiResponse updateDeviceCode(
             @RequestBody DeviceUpdatePo device) {
+        System.out.println(name);
         if(true){
             throw new BizException(123, "device update error.");
         }

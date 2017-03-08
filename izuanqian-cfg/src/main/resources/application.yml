@@ -3,12 +3,14 @@
 spring:
     application:
         name: izuanqian-cfg-server
+    profiles:
+        active: rls
     cloud:
         config:
             server:
                 git:
                     uri: https://git.oschina.net/vsan/izuanqian-cfg
-                    searchPaths: dev
+                    searchPaths: izuanqian_ilive
                     username: sanlion@vip.qq.com
                     password: ZBmima000
     rabbitmq:

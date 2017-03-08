@@ -1,15 +1,19 @@
 ## YAML Template.
 ---
 
-spring:
-    datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/ilive_res
-        username: root
-        password: root
-    rabbitmq:
-        host: i.cn
-        port: 5672
-        username: guest
-        password: guest
-    
+#spring:
+#    profiles:
+#        active: dev
+#    cloud:
+#        config:
+#            discovery:
+#                enabled: true
+#                serviceId: izuanqian-cfg-server
+#            profile: dev
+#            label: ${application.version}
+
+server:
+    port:  8888
+
+application:
+    version: 442

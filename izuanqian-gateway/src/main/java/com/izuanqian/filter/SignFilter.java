@@ -3,6 +3,7 @@ package com.izuanqian.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -12,6 +13,8 @@ public class SignFilter extends ZuulFilter {
 
     @Autowired
     private GatewayAuthority gatewayAuthority;
+    @Value("${spring.profiles.active}")
+    private String profiles;
 
 
     @Override
@@ -26,7 +29,7 @@ public class SignFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return "rls".equalsIgnoreCase(profiles);
     }
 
     @Override

@@ -58,4 +58,42 @@ public class Redis {
         }
     }
 
+
+    public static void main(String[] args) {
+
+        transform(Long.MAX_VALUE,62);
+    }
+
+    /**
+     * @param args
+     */
+
+    public static void transform(long num, int n) {
+        //参数num为输入的十进制数，参数n为要转换的进制
+        long array[] = new long[11];
+        int location = 0;
+        while (num != 0) {//当输入的数不为0时循环执行求余和赋值
+            long remainder = num % n;
+            num = num / n;
+            array[location] = remainder;//将结果加入到数组中去
+            location++;
+        }
+        show(array, location - 1);
+
+    }
+
+    private static void show(long[] arr, int n) {
+        String key = "tcd8WPqMLVYEgDspfwX4xQo5SFbNHIa3mAierCUkv61hR2079ZzGKnTyjBJOlu";
+        System.out.println(key.charAt(0));
+        for (int i = n; i >= 0; i--) {
+            System.out.println(arr[i] +" => "+key.charAt((int)arr[i]));
+        }
+//            if (arr[i] > 9) {
+//                System.out.print((char) (arr[i] + 55));
+//            } else
+//                System.out.print(arr[i] + "");
+//        }
+    }
+
+
 }

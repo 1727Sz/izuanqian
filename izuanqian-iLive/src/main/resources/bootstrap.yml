@@ -1,5 +1,7 @@
 
 #spring:
+#    profiles:
+#        active: dev
 #    cloud:
 #        config:
 #            name: izuanqian
@@ -17,16 +19,18 @@ eureka:
 spring:
     application:
          name: izuanqian_ilive
+    profiles:
+          active: rls
     cloud:
         config:
             discovery:
                 enabled: true
                 serviceId: izuanqian-cfg-server
-            profile: dev
+#            profile: dev
             label: ${application.version}
-            
-server:
-    port:  8888
-    
-application:
-    version: 442
+#
+#server:
+#    port:  8888
+#
+#application:
+#    version: 442
